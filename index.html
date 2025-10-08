@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vicente & Jenny - November 8, 2025</title>
+    <meta name="description" content="Join us in celebrating the wedding of Vicente & Jenny on November 8, 2025 in Roxas, Palawan">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <button class="nav-logo" onclick="scrollToSection('hero')">VJ</button>
+            
+            <div class="nav-menu" id="navMenu">
+                <button onclick="scrollToSection('story')">Our Story</button>
+                <button onclick="scrollToSection('details')">Details</button>
+                <button onclick="scrollToSection('gallery')">Gallery</button>
+                <button onclick="scrollToSection('gift')">Love Gift</button>
+                <button onclick="scrollToSection('contact')">Contact</button>
+            </div>
+            
+            <button class="nav-toggle" id="navToggle" onclick="toggleMobileMenu()">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Vicente & Jenny</h1>
+            <div class="hero-divider"></div>
+            <p class="hero-subtitle">are getting married</p>
+            <div class="hero-details">
+                <p class="hero-date">November 8, 2025
+                 12:00 PM</p>
+                <p class="hero-time">St. Isidore the Farmer Parish</p>
+                <p class="hero-location">Bgy.3, Roxas, Palawan</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section id="story" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Love Story</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="story-content">
+                <p class="story-text">
+                    Our story began like a fairytale, where two hearts found each other in the most unexpected way. 
+                    Through laughter and tears, adventures and quiet moments, we discovered that we were meant to be together. 
+                    Every day with you feels like a blessing, and every moment is a cherished memory in the making. 
+                    As we stand on the threshold of forever, we're filled with joy knowing that our greatest adventure is just beginning. 
+                    Together, we've learned that love isn't just about finding the perfect person—it's about seeing an imperfect person perfectly.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wedding Details Section -->
+    <section id="details" class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Wedding Details</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="details-grid">
+                <div class="detail-card">
+                    <div class="detail-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                    </div>
+                    <h3 class="detail-title">Ceremony</h3>
+                    <p class="detail-info">St. Isidore the Farmer Parish</p>
+                    <p class="detail-info">Brgy. 3, Roxas, Palawan</p>
+                    <p class="detail-info">12:00 PM</p>
+                </div>
+
+                <div class="detail-card">
+                    <div class="detail-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                        </svg>
+                    </div>
+                    <h3 class="detail-title">Reception</h3>
+                    <p class="detail-info">Ysodores Garden</p>
+                    <p class="detail-info">Roxas, Palawan</p>
+                    <p class="detail-info">Following the ceremony</p>
+                </div>
+
+                <div class="detail-card">
+                    <div class="detail-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 20v-6M6 20V10M18 20V4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="detail-title">Dress Code</h3>
+                    <p class="detail-info">Semi-Formal</p>
+                    <p class="detail-info">Blue & White Theme</p>
+                    <p class="detail-info">Comfortable elegance</p>
+                </div>
+            </div>
+            <div class="map-container">
+                <h3 class="map-title">Find Us Here</h3>
+                <div class="map-wrapper">
+                    <iframe 
+                        src="https://maps.google.com/maps?q=St.+Isidore+the+Farmer+Parish,+Brgy+3,+Roxas,+Palawan&output=embed"
+                        width="100%" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Gallery</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="./images/gallery-1.jpg" alt="Wedding ceremony setup" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="./images/gallery-1.jpg" alt="Wedding ceremony setup" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="./images/gallery-1.jpg" alt="Wedding ceremony setup" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="./images/gallery-1.jpg" alt="Wedding ceremony setup" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="./images/gallery-1.jpg" alt="Wedding ceremony setup" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="./images/gallery-1.jpg" alt="Wedding ceremony setup" loading="lazy">
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Love Gift Section -->
+    <section id="gift" class="section section-alt">
+        <div class="container-sm">
+            <div class="section-header">
+                <div class="detail-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 12 20 22 4 22 4 12"></polyline>
+                        <rect x="2" y="7" width="20" height="5"></rect>
+                        <line x1="12" y1="22" x2="12" y2="7"></line>
+                        <path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"></path>
+                        <path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"></path>
+                    </svg>
+                </div>
+                <h2 class="section-title">Love Gift</h2>
+                <div class="section-divider"></div>
+                <p class="section-description">
+                    Your presence at our wedding is the greatest gift of all. However, if you wish to honor us with a gift, 
+                    a monetary contribution would be greatly appreciated as we begin our new journey together.
+                </p>
+            </div>
+
+            <div class="gift-card">
+                <div class="gift-header">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="qr-icon">
+                        <rect x="3" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="3" width="7" height="7"></rect>
+                        <rect x="3" y="14" width="7" height="7"></rect>
+                        <path d="M14 14h2v2h-2zM16 16h2v2h-2zM14 18h2v2h-2zM18 14h2v2h-2zM18 18h2v2h-2z"></path>
+                    </svg>
+                    <h3 class="gift-title">Scan to Send Your Gift</h3>
+                    <p class="gift-subtitle">Simply scan the QR code below with your mobile banking app</p>
+                </div>
+
+                <div class="qr-placeholder">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="qr-icon-large">
+                        <rect x="3" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="3" width="7" height="7"></rect>
+                        <rect x="3" y="14" width="7" height="7"></rect>
+                        <path d="M14 14h2v2h-2zM16 16h2v2h-2zM14 18h2v2h-2zM18 14h2v2h-2zM18 18h2v2h-2z"></path>
+                    </svg>
+                    <p class="qr-label">QR Code Here</p>
+                    <p class="qr-note">Add your payment QR code image</p>
+                </div>
+
+                <div class="gift-footer">
+                    <p class="gift-footer-label">Or send directly to:</p>
+                    <p class="gift-footer-name">Vicente Badua S.</p>
+                    <p class="gift-footer-note">Account details available upon request</p>
+                </div>
+            </div>
+
+            <p class="gift-thanks">Thank you for your love and generosity!</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get in Touch</h2>
+                <div class="section-divider"></div>
+                <p class="section-description">
+                    For any questions or concerns, please feel free to reach out to us.
+                </p>
+            </div>
+
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                </div>
+                <h3 class="contact-name">Vicente Badua S.</h3>
+                <p class="contact-info">For inquiries and information</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p class="footer-names">Vicente & Jenny</p>
+        <p class="footer-date">November 8, 2025</p>
+    </footer>
+
+    <!-- Music Player -->
+    <div class="music-player" id="musicPlayer">
+        <button class="music-button" id="musicButton" onclick="toggleMusic()">
+            <svg id="playIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+            </svg>
+            <svg id="pauseIcon" style="display:none" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="6" y="4" width="4" height="16"></rect>
+                <rect x="14" y="4" width="4" height="16"></rect>
+            </svg>
+        </button>
+        <audio id="backgroundMusic" loop>
+            <source src="music/background-music.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
