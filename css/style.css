@@ -294,96 +294,127 @@ nav.scrolled {
     transform: scale(1.05);
 }
 
-/* Love Gift */
+/* === Gift Section === */
+.section-alt {
+  background-color: #f0faff;
+  padding: 80px 20px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+.section-title {
+  font-family: 'Great Vibes', cursive;
+  color: #4db8ff;
+  font-size: 2.5rem;
+}
+
+.section-divider {
+  width: 80px;
+  height: 3px;
+  background-color: #4db8ff;
+  margin: 15px auto 30px;
+  border-radius: 2px;
+}
+
+.section-description {
+  max-width: 600px;
+  margin: 0 auto 50px;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* === Gift Grid === */
+.gift-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+/* === Gift Card === */
 .gift-card {
-    background: white;
-    padding: 3rem 2rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    margin-top: 2rem;
-    animation: fadeInUp 1s ease-out;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  width: 300px;
+  padding: 30px 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gift-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(77, 184, 255, 0.2);
 }
 
 .gift-header {
-    margin-bottom: 2rem;
-}
-
-.qr-icon {
-    color: var(--primary);
-    margin: 0 auto 1rem;
+  margin-bottom: 20px;
 }
 
 .gift-title {
-    font-size: 1.75rem;
-    font-weight: 600;
-    color: var(--wedding-blue);
-    margin-bottom: 0.5rem;
+  color: #0088cc;
+  font-size: 1.4rem;
+  margin-bottom: 5px;
 }
 
 .gift-subtitle {
-    color: var(--muted);
-}
-
-.qr-placeholder {
-    width: 256px;
-    height: 256px;
-    margin: 0 auto 2rem;
-    background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(37, 99, 235, 0.05));
-    border: 2px solid rgba(37, 99, 235, 0.2);
-    border-radius: 12px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.qr-icon-large {
-    color: rgba(37, 99, 235, 0.4);
-    margin-bottom: 0.5rem;
-}
-
-.qr-label {
-    font-size: 0.875rem;
-    color: var(--muted);
-}
-
-.qr-note {
-    font-size: 0.75rem;
-    color: var(--muted);
-    margin-top: 0.25rem;
-}
-
-.gift-footer {
-    border-top: 1px solid var(--border);
-    padding-top: 1.5rem;
-}
-
-.gift-footer-label {
-    font-size: 0.875rem;
-    color: var(--muted);
-    margin-bottom: 0.5rem;
+  color: #666;
+  font-size: 0.95rem;
 }
 
 .gift-footer-name {
-    font-size: 1.125rem;
-    font-weight: 600;
-    color: var(--wedding-blue);
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #333;
 }
 
+/* === QR Code === */
+.qr-container {
+  margin: 20px 0;
+}
+
+.qr-image {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  border: 4px solid #4db8ff;
+  border-radius: 12px;
+  padding: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.qr-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(77, 184, 255, 0.4);
+}
+
+.qr-label {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 10px;
+}
+
+/* === Footer === */
 .gift-footer-note {
-    font-size: 0.875rem;
-    color: var(--muted);
-    margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #777;
+  margin-top: 10px;
 }
 
 .gift-thanks {
-    text-align: center;
-    color: var(--muted);
-    margin-top: 2rem;
-    font-style: italic;
-    font-size: 0.875rem;
+  margin-top: 50px;
+  font-size: 1rem;
+  color: #0088cc;
 }
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .gift-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 
 /* Contact */
 .contact-card {
@@ -419,6 +450,7 @@ nav.scrolled {
     color: white;
     text-align: center;
     padding: 2rem;
+    line-height: 0.8;
 }
 
 .footer-names {
@@ -562,4 +594,122 @@ nav.scrolled {
 
 .map-wrapper iframe {
     display: block;
+}
+
+
+/* === Timeline Section === */
+.timeline-section {
+  padding: 80px 20px;
+  background: #ffffff;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.timeline-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.8rem;
+  margin-bottom: 50px;
+  color: #4db8ff; /* Sky blue title */
+}
+
+/* === Timeline Layout === */
+.timeline {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 4px;
+  background: #4db8ff; /* Sky blue line */
+  top: 0;
+  bottom: 0;
+  transform: translateX(-50%);
+}
+
+/* === Timeline Items === */
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 20px 40px;
+  box-sizing: border-box;
+}
+
+.timeline-item:nth-child(odd) {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+  left: 50%;
+  text-align: left;
+}
+
+.timeline-item::after {
+  content: "";
+  position: absolute;
+  top: 25px;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border: 4px solid #4db8ff; /* Sky blue dots */
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.timeline-item:nth-child(odd)::after {
+  right: -10px;
+}
+
+.timeline-item:nth-child(even)::after {
+  left: -10px;
+}
+
+/* === Timeline Content === */
+.timeline-content {
+  background: #f0faff; /* Soft sky blue background */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  display: inline-block;
+  position: relative;
+}
+
+.timeline-content h3 {
+  color: #0088cc; /* Deep sky blue */
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+}
+
+.timeline-content .date {
+  display: block;
+  font-size: 0.9rem;
+  color: #7a7a7a;
+  margin-bottom: 10px;
+}
+
+.timeline-content p {
+  line-height: 1.6;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 20px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 50px;
+    text-align: left;
+  }
+
+  .timeline-item::after {
+    left: 10px;
+  }
 }
