@@ -713,3 +713,145 @@ nav.scrolled {
     left: 10px;
   }
 }
+
+/* === Invitation Modal (Responsive & Larger) === */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.65);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  z-index: 9999;
+}
+
+.modal-overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-box {
+  background: #fff;
+  border-radius: 25px;
+  padding: 50px 40px;
+  text-align: center;
+  width: 90%;
+  max-width: 600px; /* Wider for desktop */
+  box-shadow: 0 10px 40px rgba(0,0,0,0.25);
+  animation: fadeUp 0.6s ease;
+  position: relative;
+}
+
+@keyframes fadeUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.modal-box .script {
+  font-family: 'Great Vibes', cursive;
+  color: #007bff;
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.modal-box .message {
+  color: #444;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.modal-box .btn {
+  display: inline-block;
+  background: #007bff;
+  color: white;
+  text-decoration: none;
+  padding: 12px 35px;
+  border-radius: 30px;
+  margin-top: 25px;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+.modal-box .btn:hover {
+  background: #0056b3;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  font-size: 2rem;
+  color: #666;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.close-btn:hover {
+  color: #000;
+}
+
+/* Event Details Section */
+.event-details {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.event-details h3 {
+  font-size: 1.4rem;
+  color: #007bff;
+  margin-bottom: 8px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.event-details p {
+  margin: 0 0 18px;
+  color: #444;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+  .modal-box {
+    padding: 35px 25px;
+    max-width: 90%;
+  }
+
+  .modal-box .script {
+    font-size: 2.2rem;
+  }
+
+  .modal-box .message {
+    font-size: 1rem;
+  }
+
+  .event-details h3 {
+    font-size: 1.2rem;
+  }
+
+  .event-details p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-box {
+    border-radius: 15px;
+    padding: 30px 20px;
+  }
+
+  .modal-box .script {
+    font-size: 2rem;
+  }
+
+  .modal-box .btn {
+    width: 100%;
+    padding: 12px;
+  }
+}
