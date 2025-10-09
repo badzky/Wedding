@@ -15,6 +15,32 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<!-- 💌 Invitation Modal -->
+<!-- 💌 Invitation Modal -->
+<div class="modal-overlay" id="invitationModal">
+  <div class="modal-box">
+    <span class="close-btn" id="closeModal">&times;</span>
+    <h1 class="script">You're Invited!</h1>
+
+    <p class="message">
+      We are overjoyed to invite you to celebrate our wedding day.<br><br>
+      <strong>Vicente & Jenny</strong><br>
+      <em>November 8, 2025
+      12:00 PM<br>
+      St. Isidore the Farmer Parish, Bgy.3, Roxas, Palawan  
+      </em><br><br>
+      Join us as we begin our journey together surrounded by love, laughter, and blessings.
+    </p>
+
+    
+
+    <!-- <a href="#details" class="btn">See Wedding Details</a> -->
+  </div>
+</div>
+
+
+
+
     <!-- Navigation -->
     <nav id="navbar">
         <div class="nav-container">
@@ -74,15 +100,15 @@
     <div class="timeline-item">
       <div class="timeline-content">
         <h3>First Met</h3>
-        <span class="date">June 2018</span>
-        <p>It all began on a sunny afternoon when we met at the university. A simple hello started everything.</p>
+        <span class="date">September 2023</span>
+        <p>It all began on a sunny afternoon when we met at the Fullbright College. A simple hello started everything.</p>
       </div>
     </div>
 
     <div class="timeline-item">
       <div class="timeline-content">
         <h3>First Date</h3>
-        <span class="date">August 2018</span>
+        <span class="date">October 18,202</span>
         <p>Our first coffee date was full of laughter, stories, and a spark we couldn’t ignore.</p>
       </div>
     </div>
@@ -90,7 +116,7 @@
     <div class="timeline-item">
       <div class="timeline-content">
         <h3>Got Together</h3>
-        <span class="date">October 2018</span>
+        <span class="date">November 18,2023</span>
         <p>We officially became a couple — a new chapter filled with love and adventures began.</p>
       </div>
     </div>
@@ -98,7 +124,7 @@
     <div class="timeline-item">
       <div class="timeline-content">
         <h3>Engagement</h3>
-        <span class="date">February 2024</span>
+        <span class="date">September 2024</span>
         <p>He asked, and she said yes! A beautiful moment that marked the beginning of forever.</p>
       </div>
     </div>
@@ -106,7 +132,7 @@
     <div class="timeline-item">
       <div class="timeline-content">
         <h3>Wedding Day</h3>
-        <span class="date">December 2025</span>
+        <span class="date">November 8, 2025</span>
         <p>Two hearts become one — surrounded by family, friends, and endless love.</p>
       </div>
     </div>
@@ -321,6 +347,23 @@
             <source src="music/background-music.mp3" type="audio/mpeg">
         </audio>
     </div>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const modal = document.getElementById("invitationModal");
+  const closeBtn = document.getElementById("closeModal");
+
+  // Show modal after short delay (e.g. 1 second)
+  setTimeout(() => modal.classList.add("show"), 1000);
+
+  // Close modal when clicking X
+  closeBtn.addEventListener("click", () => modal.classList.remove("show"));
+
+  // Close modal when clicking outside
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) modal.classList.remove("show");
+  });
+});
+</script>
 
     <script src="js/script.js"></script>
 </body>
