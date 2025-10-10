@@ -127,61 +127,124 @@ nav.scrolled {
 
 /* Hero Section */
 .hero {
-    height: 100vh;
-    background-image: url('../images/hero-background.jpg');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    position: relative;
-}
-.hero p {
-  line-height: 0.8;
+  position: relative;
+  height: 100vh;
+  background-image: url('../images/hero-background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
 }
 
+/* Overlay */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
 
 .hero-content {
-    z-index: 1;
-    animation: fadeIn 1s ease-out;
+  position: relative;
+  z-index: 1;
+  animation: fadeIn 1.5s ease-out;
+  padding: 1rem;
 }
 
 .hero-title {
-    font-family: 'Great Vibes', cursive;
-    font-size: 5rem;
-    margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    
+  font-family: 'Great Vibes', cursive;
+  font-size: 5rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
 }
 
 .hero-divider {
-    width: 150px;
-    height: 2px;
-    background: white;
-    margin: 1rem auto;
+  width: 120px;
+  height: 3px;
+  background: #fff;
+  margin: 1rem auto;
+  border-radius: 2px;
 }
 
 .hero-subtitle {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  font-weight: 300;
+  margin-bottom: 1.2rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
+/* Details section */
 .hero-details {
-    font-size: 1.25rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 1.2rem;
+  line-height: 1.2; /* reduces spacing between lines */
 }
 
 .hero-date {
-    font-weight: 600;
-    margin-bottom: 0.5rem;
+  font-weight: 600;
+  font-size: 1.3rem;
+  margin-bottom: 0.2rem; /* less gap */
 }
 
 .hero-time,
 .hero-location {
-    margin: 0.25rem 0;
+  margin: 0.1rem 0; /* tighter spacing */
 }
+
+/* Bible Verse */
+.hero-verse {
+  font-size: 1.1rem;
+  font-style: italic;
+  font-family: 'Georgia', serif;
+  opacity: 0.9;
+  margin-top: 0.5rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .hero-details {
+    font-size: 1rem;
+    line-height: 1.1;
+  }
+
+  .hero-verse {
+    font-size: 0.9rem;
+  }
+
+  .hero-divider {
+    width: 80px;
+  }
+}
+
 
 /* Sections */
 .section {
@@ -713,23 +776,29 @@ nav.scrolled {
     left: 10px;
   }
 }
-
-/* === Invitation Modal (Responsive & Larger) === */
+/* === Invitation Modal: Mirror Glass with Soft Gradient Glow & Water Drops === */
 .modal-overlay {
   position: fixed;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.65);
-  backdrop-filter: blur(8px);
+  background: linear-gradient(120deg, #bde0fe, #ffffff, #a2d9ff);
+  background-size: 400% 400%;
+  animation: skyBreeze 25s ease-in-out infinite;
   display: flex;
   align-items: center;
   justify-content: center;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.4s ease;
+  transition: opacity 0.6s ease;
+  overflow: hidden;
   z-index: 9999;
+}
+
+@keyframes skyBreeze {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 .modal-overlay.show {
@@ -737,112 +806,164 @@ nav.scrolled {
   pointer-events: auto;
 }
 
+/* === Mirror Glass Modal === */
 .modal-box {
-  background: #fff;
-  border-radius: 25px;
-  padding: 50px 40px;
+  position: relative;
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 30px;
+  padding: 60px 50px;
   text-align: center;
   width: 90%;
-  max-width: 600px; /* Wider for desktop */
-  box-shadow: 0 10px 40px rgba(0,0,0,0.25);
-  animation: fadeUp 0.6s ease;
-  position: relative;
+  max-width: 650px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(25px) saturate(180%);
+  -webkit-backdrop-filter: blur(25px) saturate(180%);
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.25),
+    inset 0 0 40px rgba(255, 255, 255, 0.15),
+    inset 0 0 80px rgba(173, 216, 230, 0.25);
+  overflow: hidden;
+  animation: fadeUp 1s ease;
+  z-index: 2;
 }
 
+/* === Subtle Gradient Glow on Glass === */
+.modal-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg,
+    rgba(255,255,255,0.1),
+    rgba(173,216,230,0.25),
+    rgba(255,255,255,0.1));
+  background-size: 300% 300%;
+  animation: glassGlow 12s ease-in-out infinite;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes glassGlow {
+  0% { background-position: 0% 50%; opacity: 0.9; }
+  50% { background-position: 100% 50%; opacity: 1; }
+  100% { background-position: 0% 50%; opacity: 0.9; }
+}
+
+/* === Soft Moving Water Drops === */
+.modal-box::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 10% 20%, rgba(255,255,255,0.4) 1%, transparent 2%),
+    radial-gradient(circle at 30% 80%, rgba(255,255,255,0.25) 1.5%, transparent 2.5%),
+    radial-gradient(circle at 70% 40%, rgba(255,255,255,0.35) 1.2%, transparent 2%),
+    radial-gradient(circle at 50% 60%, rgba(255,255,255,0.3) 1%, transparent 2%);
+  background-size: 100% 100%;
+  opacity: 0.35;
+  filter: blur(1.5px);
+  animation: dropSlide 20s ease-in-out infinite alternate;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes dropSlide {
+  0% { transform: translateY(0) translateX(0); }
+  50% { transform: translateY(10px) translateX(-5px); }
+  100% { transform: translateY(-10px) translateX(5px); }
+}
+
+/* === Fade Animation === */
 @keyframes fadeUp {
-  from { transform: translateY(40px); opacity: 0; }
+  from { transform: translateY(50px); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
 }
 
+/* === Typography === */
 .modal-box .script {
   font-family: 'Great Vibes', cursive;
-  color: #007bff;
-  font-size: 3rem;
+  color: #0077cc;
+  font-size: 3.2rem;
   margin-bottom: 15px;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px rgba(255, 255, 255, 0.6);
+  position: relative;
+  z-index: 3;
 }
 
 .modal-box .message {
-  color: #444;
-  font-size: 1.1rem;
-  line-height: 1.7;
+  color: #04395e;
+  font-size: 1.15rem;
+  line-height: 1.8;
   margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  z-index: 3;
 }
 
-.modal-box .btn {
+.couple-names {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.6rem;
+  color: #0077b6;
   display: inline-block;
-  background: #007bff;
-  color: white;
-  text-decoration: none;
-  padding: 12px 35px;
-  border-radius: 30px;
-  margin-top: 25px;
-  font-weight: 500;
-  transition: background 0.3s;
-}
-.modal-box .btn:hover {
-  background: #0056b3;
+  margin: 10px 0;
+  text-shadow: 0 2px 6px rgba(255, 255, 255, 0.5);
 }
 
+.event-details-text {
+  display: inline-block;
+  color: #023047;
+  font-size: 1.05rem;
+  line-height: 1.3;
+  margin-top: 0.5rem;
+  position: relative;
+  z-index: 3;
+}
+
+/* === Close Button === */
 .close-btn {
   position: absolute;
-  top: 15px;
-  right: 25px;
+  top: 18px;
+  right: 28px;
   font-size: 2rem;
-  color: #666;
+  color: #0466c8;
   cursor: pointer;
-  transition: color 0.3s;
+  transition: color 0.3s ease, transform 0.3s ease;
+  z-index: 4;
 }
 .close-btn:hover {
-  color: #000;
+  color: #023e8a;
+  transform: rotate(90deg);
 }
 
-/* Event Details Section */
-.event-details {
-  margin-top: 30px;
-  text-align: center;
-}
-
-.event-details h3 {
-  font-size: 1.4rem;
-  color: #007bff;
-  margin-bottom: 8px;
-  font-family: 'Poppins', sans-serif;
-}
-
-.event-details p {
-  margin: 0 0 18px;
-  color: #444;
-  line-height: 1.6;
-  font-size: 1rem;
-}
-
-/* === Responsive Design === */
+/* === Responsive === */
 @media (max-width: 768px) {
   .modal-box {
-    padding: 35px 25px;
+    padding: 40px 25px;
     max-width: 90%;
   }
 
   .modal-box .script {
-    font-size: 2.2rem;
+    font-size: 2.4rem;
+  }
+
+  .couple-names {
+    font-size: 2rem;
   }
 
   .modal-box .message {
     font-size: 1rem;
+    line-height: 1.7;
   }
 
-  .event-details h3 {
-    font-size: 1.2rem;
-  }
-
-  .event-details p {
-    font-size: 0.95rem;
+  .event-details-text {
+    font-size: 1rem;
   }
 }
 
 @media (max-width: 480px) {
   .modal-box {
-    border-radius: 15px;
+    border-radius: 20px;
     padding: 30px 20px;
   }
 
@@ -850,8 +971,7 @@ nav.scrolled {
     font-size: 2rem;
   }
 
-  .modal-box .btn {
-    width: 100%;
-    padding: 12px;
+  .couple-names {
+    font-size: 1.7rem;
   }
 }
