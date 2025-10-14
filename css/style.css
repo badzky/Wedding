@@ -968,3 +968,48 @@ nav.scrolled {
     font-size: 1.7rem;
   }
 }
+/* Entourage Section */
+.entourage-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.entourage-role {
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--accent-color, #3c6382);
+  margin-bottom: 0.8rem;
+}
+
+.entourage-column p {
+  margin: 0.3rem 0;
+  color: #444;
+  font-size: 0.95rem;
+}
+
+/* Principal Sponsors Two-Column Layout */
+.sponsor-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.sponsor-column h4.sponsor-subtitle {
+  font-weight: 700;
+  color: var(--accent-color, #3c6382);
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
+.sponsor-column p {
+  margin: 0.4rem 0;
+  color: #444;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
